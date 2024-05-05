@@ -8,16 +8,10 @@ import NoPage from "./pages/noPage";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/companies" element={<Companies />} />
-          <Route path="*" element={<NoPage />} />
-        </Routes>
-      </BrowserRouter>
+      <div>
+        <NavBar links={links} />
+        <Caroussel />
+      </div>
     </>
   );
 }
