@@ -18,16 +18,16 @@ function FixedNavBar() {
         </a>
 
         <div className="navbar-nav">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="/jobs">
             Jobs
           </a>
-          <a className="nav-link" href="#">
-            Companies
-          </a>
-          <a className="nav-link" aria-disabled="true">
+          <a className="nav-link" href="/about">
             About
           </a>
-          <a className="nav-link" aria-disabled="true">
+          <a className="nav-link" href="/companies">
+            Companies
+          </a>
+          <a className="nav-link" href="/contacts">
             Contacts
           </a>
         </div>
