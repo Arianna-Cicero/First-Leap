@@ -134,3 +134,7 @@ footer {
 .body {
   padding-top: 80px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
