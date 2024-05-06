@@ -7,7 +7,7 @@ function FixedNavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/home">
           <img
             src={Logo}
             alt="First Leap"
@@ -16,40 +16,52 @@ function FixedNavBar() {
             height="40"
           />
         </a>
-
-        <div className="navbar-nav">
-          <a className="nav-link" href="/jobs">
-            Jobs
-          </a>
-          <a className="nav-link" href="/about">
-            About
-          </a>
-          <a className="nav-link" href="/companies">
-            Companies
-          </a>
-          <a className="nav-link" href="/contacts">
-            Contacts
-          </a>
-        </div>
-        <div className="navbar-nav d-flex">
-          <a className="navbar-brand " href="#">
-            <img
-              src={Chat}
-              alt="Chat"
-              width="30"
-              height="30"
-              className="icon"
-            />
-          </a>
-          <a className="navbar-brand" href="#">
-            <img
-              src={ProfileIcon}
-              alt="Profile"
-              width="30"
-              height="30"
-              className="icon"
-            />
-          </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="navbar-nav flex-grow-1 justify-content-center">
+            <a className="nav-link" href="/jobs">
+              Jobs
+            </a>
+            <a className="nav-link" href="/about">
+              About
+            </a>
+            <a className="nav-link" href="/companies">
+              Companies
+            </a>
+            <a className="nav-link" href="/contacts">
+              Contacts
+            </a>
+          </div>
+          <div className="navbar-nav">
+            <a className="navbar-brand" href="/chat">
+              <img
+                src={Chat}
+                alt="Chat"
+                width="30"
+                height="30"
+                className="icon"
+              />
+            </a>
+            <a className="navbar-brand" href="/login">
+              <img
+                src={ProfileIcon}
+                alt="Profile"
+                width="30"
+                height="30"
+                className="icon"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </nav>

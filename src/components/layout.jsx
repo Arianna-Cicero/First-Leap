@@ -6,7 +6,7 @@ function Layout({ children }) {
   return (
     <div>
       <FixedNavBar />
-      {children}
+      <div style={{ marginTop: "80px", marginBottom: "80px" }}>{children}</div>
       <Footer />
     </div>
   );
