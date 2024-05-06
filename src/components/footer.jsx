@@ -3,7 +3,7 @@ import "../../index.css";
 
 function Footer() {
   return (
-    <div class="bg-dark text-white pt-5 pb-4">
+    <footer class="bg-dark text-white pt-5 pb-4 w-100">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
@@ -13,22 +13,31 @@ function Footer() {
               </a>
             </h2>
             <p class="menu">
-              <a class="link-secondary text-decoration-none mx-2" href="#">
+              <a class="link-secondary text-decoration-none mx-2" href="/home">
                 Home
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="#">
+              <a class="link-secondary text-decoration-none mx-2" href="/about">
                 About
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="#">
+              <a
+                class="link-secondary text-decoration-none mx-2"
+                href="/companies"
+              >
                 Companies
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="#">
+              <a
+                class="link-secondary text-decoration-none mx-2"
+                href="/contacts"
+              >
                 Contacts
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="#">
+              <a class="link-secondary text-decoration-none mx-2" href="chat">
                 Chat
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="#">
+              <a
+                class="link-secondary text-decoration-none mx-2"
+                href="profile"
+              >
                 Profile
               </a>
             </p>
@@ -74,7 +83,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 
