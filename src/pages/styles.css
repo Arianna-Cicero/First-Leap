@@ -1,0 +1,20 @@
+.custom-input {
+  border: 2px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Add rounded corners */
+  padding: 20px; /* Add padding */
+  box-shadow: none; /* Remove any box shadow */
+  background-color: #F3F1FF;
+  font-family: sans-serif;
+}
+
+.custom-input:focus {
+  border-color: #007bff; /* Change border color when focused */
+}
+
+.p {
+  font-family: sans-serif;
+}
+
+.h3 {
+  font-family: sans-serif;
+}
