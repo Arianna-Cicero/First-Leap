@@ -5,9 +5,7 @@ import React from "react";
 function Register() {
   return (
     <Layout>
-      <>
         <ImgSideInputs></ImgSideInputs>
-      </>
     </Layout>
   );
 }

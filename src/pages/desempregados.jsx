@@ -1,5 +1,5 @@
 import Jobhunt from "../assets/Job-hunt-amico.svg";
-import OfertasDesemp from "../components/OfertasDesemp";
+import OfertasDesemp from "../components/ofertasDesemp";
 import Certification from "../assets/Certification-rafiki.svg"
 function Desempregados() {
   return (

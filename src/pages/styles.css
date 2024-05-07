@@ -18,3 +18,36 @@
 .h3 {
   font-family: sans-serif;
 }
+
+.job-offer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between sections */
+}
+
+.job-description {
+  max-width: 800px; /* Limit width of job description */
+}
+
+.job-description h3 {
+  margin-top: 20px;
+}
+
+.job-description p {
+  margin-bottom: 15px;
+}
+.apply-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: gray;
+}

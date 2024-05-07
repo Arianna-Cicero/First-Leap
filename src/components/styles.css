@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  font-family: "Roboto";
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+
+.btn-google,
+.btn-facebook {
+  width: 300px; /* Adjust the width of the buttons */
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  
+}
+
+.icon {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.register-input {
+  background-color: #f3f1ff;
+  border: 1px solid #a7a7a7;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: none;
+  margin-bottom: 5px;
+  font-size: 15px;
+  width: 300px;
+  height: 44px;
+}
+
+.register-button{
+  background: linear-gradient(to right, #5D46EE, #8777F3);
+  border-radius: 20px;
+  font-size: 17px;
+  font-family:  Roboto ;
+}
+
