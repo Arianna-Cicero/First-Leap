@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/Logo.svg";
 import ProfileIcon from "../assets/icon_profile.svg";
 import Chat from "../assets/icon_chat.svg";
+import "../../index.css";
 
 function FixedNavBar() {
   return (

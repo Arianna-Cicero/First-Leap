@@ -1,8 +1,9 @@
 import React from "react";
-
-function ImageWithText({ imageUrl, title, link }) {
+import "../../index.css";
+function Card({ imageUrl, title, link }) {
   return (
     <div
+      className="card"
       style={{
         display: "flex",
         justifyContent: "center",
@@ -34,4 +35,4 @@ function ImageWithText({ imageUrl, title, link }) {
   );
 }
 
-export default ImageWithText;
+export default Card;

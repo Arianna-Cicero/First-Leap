@@ -5,11 +5,14 @@ import SixDigitInput from "../components/sixDigitInput";
 function Auth() {
   return (
     <Layout>
-      <div className="container">
+      <div
+        className="d-flex flex-column  align-items-center "
+        style={{ minHeight: "60vh" }}
+      >
         <h1>Código enviado</h1>
         <p>
           Foi enviado um código de verificação a sua caixa de correio. Por
-          favor, insira o código recebido para validar a sua conta
+          favor, insira o código recebido para validar a sua conta.
         </p>
         <SixDigitInput />
       </div>

@@ -1,12 +1,14 @@
 import React from "react";
-import FixedNavBar from "./navBar";
 import Footer from "./footer";
+import FixedNavBar from "../components/navBar";
 
 function Layout({ children }) {
   return (
-    <div>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <FixedNavBar />
-      <div style={{ marginTop: "80px", marginBottom: "80px" }}>{children}</div>
+      <div style={{ flex: 1, marginTop: "80px" }}>{children}</div>
       <Footer />
     </div>
   );

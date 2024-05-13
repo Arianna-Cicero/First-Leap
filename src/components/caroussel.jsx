@@ -37,8 +37,10 @@ function Caroussel() {
             height="600"
           />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Primeiro slide titulo</h5>
-            <p>Este é o slide de collab</p>
+            <h5 className="title ">
+              Primeiro emprego? Estágio profissional? Desempregado?
+            </h5>
+            <p>First leap é para todos os tipos de candidatos</p>
           </div>
         </div>
         <div className="carousel-item">
@@ -49,14 +51,14 @@ function Caroussel() {
             height="600"
           />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Segundo slide titulo</h5>
+            <h5 className="title ">Segundo slide titulo</h5>
             <p>Este é o slide de jobHunt</p>
           </div>
         </div>
         <div className="carousel-item">
           <img src={dev} className="d-block w-100" alt="Slide 3" height="600" />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Terceiro slide titulo</h5>
+            <h5 className="title ">Terceiro slide titulo</h5>
             <p>Este é o slide de developer.</p>
           </div>
         </div>
