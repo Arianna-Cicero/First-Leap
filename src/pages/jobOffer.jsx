@@ -7,11 +7,14 @@ function JobOffer() {
     <Layout>
       <div className="job-offer-container">
         <div className="job-details">
-          <h1>Titulo da Oferta</h1>
-          <h2>Nome da Empresa</h2>
+          <h1 className="text-center title title-large">Titulo da Oferta</h1>
+        <div>
+          <h2 className="text-center title title-small">Nome da Empresa</h2>
+        </div>
+          
         </div>
         <div className="job-description">
-          <h3>Descrição da Oferta</h3>
+          <h3 className="title title-small">Descrição da Oferta</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut
             turpis at risus iaculis tempus. Aliquam erat volutpat. Proin egestas
