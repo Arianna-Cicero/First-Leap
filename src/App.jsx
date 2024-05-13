@@ -8,11 +8,13 @@ import NoPage from "./pages/noPage";
 import Desempregados from "./pages/desempregados";
 import Login from "./pages/login";
 import Auth from "./pages/auth";
-
+import Register from "./pages/register"
+import JobOffer from "./pages/jobOffer";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <JobOffer></JobOffer>
+      {/* <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -23,7 +25,7 @@ function App() {
           <Route path="/login" element={<Auth />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }

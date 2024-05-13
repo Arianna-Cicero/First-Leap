@@ -1,0 +1,53 @@
+.custom-input {
+  border: 2px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Add rounded corners */
+  padding: 20px; /* Add padding */
+  box-shadow: none; /* Remove any box shadow */
+  background-color: #F3F1FF;
+  font-family: sans-serif;
+}
+
+.custom-input:focus {
+  border-color: #007bff; /* Change border color when focused */
+}
+
+.p {
+  font-family: sans-serif;
+}
+
+.h3 {
+  font-family: sans-serif;
+}
+
+.job-offer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between sections */
+}
+
+.job-description {
+  max-width: 800px; /* Limit width of job description */
+}
+
+.job-description h3 {
+  margin-top: 20px;
+}
+
+.job-description p {
+  margin-bottom: 15px;
+}
+.apply-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: gray;
+}
