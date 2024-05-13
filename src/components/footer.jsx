@@ -1,9 +1,13 @@
 import React from "react";
 import "../../index.css";
+import linkedin from "../assets/linkedin.svg";
+import phone from "../assets/phone.svg";
+import email from "../assets/email.svg";
+import "../../index.css";
 
 function Footer() {
   return (
-    <footer class="bg-dark text-white pt-5 pb-4 w-100">
+    <footer class="bg-dark text-white pt-5 pb-4">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
@@ -15,6 +19,9 @@ function Footer() {
             <p class="menu">
               <a class="link-secondary text-decoration-none mx-2" href="/home">
                 Home
+              </a>
+              <a class="link-secondary text-decoration-none mx-2" href="/jobs">
+                Jobs
               </a>
               <a class="link-secondary text-decoration-none mx-2" href="/about">
                 About
@@ -31,7 +38,7 @@ function Footer() {
               >
                 Contacts
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="chat">
+              <a class="link-secondary text-decoration-none mx-2" href="/chat">
                 Chat
               </a>
               <a
@@ -42,34 +49,40 @@ function Footer() {
               </a>
             </p>
             <ul class="ftco-footer-social p-0">
-              <li class="ftco-animate">
+              <li class="footer-li">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/arianna-cicero-ba0b5a220/"
                   data-toggle="tooltip"
                   data-placement="top"
-                  title="Twitter"
+                  title="Linkedin"
                 >
-                  <span class="ion-logo-twitter"></span>
+                  <span>
+                    <img src={linkedin} className="footer-image" />
+                  </span>
                 </a>
               </li>
-              <li class="ftco-animate">
+              <li class="footer-li">
                 <a
-                  href="#"
+                  href="/contacts"
                   data-toggle="tooltip"
                   data-placement="top"
-                  title="Facebook"
+                  title="Email"
                 >
-                  <span class="ion-logo-facebook"></span>
+                  <span>
+                    <img src={email} className="footer-image" />
+                  </span>
                 </a>
               </li>
-              <li class="ftco-animate">
+              <li class="footer-li">
                 <a
-                  href="#"
+                  href="/contacts"
                   data-toggle="tooltip"
                   data-placement="top"
-                  title="Instagram"
+                  title="Phone"
                 >
-                  <span class="ion-logo-instagram"></span>
+                  <span>
+                    <img src={phone} className="footer-image" />
+                  </span>
                 </a>
               </li>
             </ul>
