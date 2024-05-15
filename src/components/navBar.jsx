@@ -6,7 +6,10 @@ import "../../index.css";
 
 function FixedNavBar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav
+      className="navbar navbar-expand-lg navbar-light fixed-top"
+      style={{ backgroundColor: "rgba(128, 128, 128, 0.1)" }}
+    >
       <div className="container-fluid">
         <a className="navbar-brand" href="/home">
           <img
