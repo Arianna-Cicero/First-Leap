@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import "./styles.css"; // Import the CSS file for styling
-
+import ShareIcon from "../assets/Share-Icon.svg"
 function JobOffer() {
   return (
     <Layout>
@@ -36,6 +36,7 @@ function JobOffer() {
         </div>
         <div>
           <button className="apply-button">Candidatar</button>
+          <img src={ShareIcon} alt="Share Icon" className="share-icon" />
         </div>
       </div>
     </Layout>

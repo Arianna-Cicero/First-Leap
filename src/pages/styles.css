@@ -52,3 +52,7 @@
 .apply-button:hover {
   background-color: gray;
 }
+
+.bar-button{
+  margin-bottom: 30px;
+}

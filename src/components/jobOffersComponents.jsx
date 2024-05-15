@@ -1,7 +1,7 @@
 import React from "react";
 function JobOffersComponents(){
   return(
-    <div class="container offers">
+    <div class="container offers bg-danger">
         <div class="row justify-content-center">
           <div class="col-md-6 card">
             <div class="card-body">
@@ -23,7 +23,7 @@ function JobOffersComponents(){
             <div class="card-body">
               <h3 class="card-title">Titulo da Oferta</h3>
               <h4>Empresa</h4>
-              <h5>
+              <h5> 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut
                 turpis at risus iaculis tempus. Aliquam erat volutpat. Proin
                 egestas sem id hendrerit malesuada. Phasellus non iaculis lacus,

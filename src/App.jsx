@@ -10,11 +10,12 @@ import Login from "./pages/login";
 import Auth from "./pages/auth";
 import Register from "./pages/register"
 import JobOffer from "./pages/jobOffer";
+import ListJobOffers from "./pages/listJobOffers";
 function App() {
   return (
     <>
-      <JobOffer></JobOffer>
-      {/* <BrowserRouter>
+      <Desempregados />
+      {/* <BrowserRouter> 
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
