@@ -7,7 +7,11 @@ import "../../index.css";
 
 function Footer() {
   return (
-    <footer class="bg-dark text-white pt-5 pb-4">
+    <footer
+      class="text-white pt-5 pb-4"
+      data-bs-theme="dark"
+      style={{ background: "#304D30" }}
+    >
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">

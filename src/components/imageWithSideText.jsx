@@ -77,8 +77,15 @@ function ImageSideText({
           data-slide-direction={slideDirection}
           style={{ background: backgroundcolor, borderRadius: 10 }}
         >
-          <h2 className="text-center title title-medium">{title}</h2>
-          <p className="text-center">{description}</p>
+          <h2
+            className="text-center title title-medium"
+            style={{ color: "#304D30" }}
+          >
+            {title}
+          </h2>
+          <p className="text-center" style={{ color: "#fffff" }}>
+            {description}
+          </p>
         </div>
       </div>
     </div>
