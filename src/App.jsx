@@ -7,15 +7,13 @@ import Companies from "./pages/companies";
 import NoPage from "./pages/noPage";
 import Desempregados from "./pages/desempregados";
 import Login from "./pages/login";
-import Auth from "./pages/auth";
-import Register from "./pages/register"
-import JobOffer from "./pages/jobOffer";
-import ListJobOffers from "./pages/listJobOffers";
+// import Register from "./pages/register";
+// import JobOffer from "./pages/jobOffer";
+// import ListJobOffers from "./pages/listJobOffers";
 function App() {
   return (
     <>
-      <Desempregados />
-      {/* <BrowserRouter> 
+      <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -23,10 +21,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/companies" element={<Companies />} />
           <Route path="/desempregados" element={<Desempregados />} />
-          <Route path="/login" element={<Auth />} />
+          {/* <Route path="/login" element={<Login />} /> */}
+          {/* <Route path="/register" element={<Auth />} />
+          <Route path="/joboffers" element={<Auth />} /> */}
           <Route path="*" element={<NoPage />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 }
