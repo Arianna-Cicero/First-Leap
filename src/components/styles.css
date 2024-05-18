@@ -131,6 +131,7 @@
 
 .search-button:hover {
   background-color: gray;
+  transform: scale(1.2); /* Increase size on hover */
 }
 
 .search-bar {
@@ -144,5 +145,73 @@
 
 .card-body:hover{
   cursor: pointer;
+  width: 100%;
 }
 
+/* Styles for Section 1 */
+.section-title {
+  margin-bottom: 10px;
+}
+
+.container-desemp {
+  max-width: 2000px; /* Define a largura máxima */
+  margin: 0 auto; /* Centraliza o container na página */
+}
+
+.p-section {
+  font-size: 18px;
+}
+
+.container-offers{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.job-card {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.job-card:hover {
+  width: 100% !important;
+  height: auto !important;
+  transform: scale(1.0) !important;
+}
+
+.btn-asc, .btn-desc, .btn-rec, .btn-old {
+  color: black;
+  border-color: black;
+  background-color: white; /* Garantir que o fundo é branco por padrão */
+}
+
+.btn-asc:hover, .btn-desc:hover, .btn-rec:hover, .btn-old:hover {
+  border-color: black;
+  background-color: black;
+  color: white; /* Cor do texto no hover deve ser branca para contraste */
+}
+
+/* Estilo quando o botão está ativo */
+.btn-asc:active, .btn-desc:active, .btn-rec:active, .btn-old:active,
+.btn-asc:checked, .btn-desc:checked, .btn-rec:checked, .btn-old:checked {
+  border-color: black;
+  background-color: black;
+  color: white;
+}
+
+/* Garantir que os estilos são aplicados quando os botões estão focados */
+.btn-asc:focus, .btn-desc:focus, .btn-rec:focus, .btn-old:focus {
+  border-color: black;
+  background-color: black;
+  color: white;
+}
+
+.add-icon{
+  height: 50px;
+  margin-left: 60px;
+}
+
+.add-icon:hover{
+  cursor: pointer;
+  transform: scale(1.2); /* Aumenta o tamanho da imagem em 20% */
+}

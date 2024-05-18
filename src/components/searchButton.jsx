@@ -1,11 +1,11 @@
 import React from "react";
-import Filter from "../assets/filter_icon.svg"
+import FilterButton from "./filterButton";
 
 function SearchBar() {
   return(
     <>
       <button className="search-button">Procurar</button>
-      <img src={Filter} alt="Filter Icon" className="icon-filter"></img>
+      <FilterButton></FilterButton>
     </>
   );
 }
