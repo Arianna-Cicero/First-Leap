@@ -9,8 +9,12 @@ import Desempregados from "./pages/desempregados";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import JobOffer from "./pages/jobOffer";
+<<<<<<< HEAD
 import Jobs from "./pages/jobs";
 import CreateJob from "./pages/createJob";
+=======
+// import ListJobOffers from "./pages/listJobOffers";
+>>>>>>> origin/master
 function App() {
   return (
     <>
@@ -23,7 +27,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/companies" element={<Companies />} />
           <Route path="/desempregados" element={<Desempregados />} />
-          <Route path="/login" element={<Auth />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/joboffers" element={<JobOffer />} /> 
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
