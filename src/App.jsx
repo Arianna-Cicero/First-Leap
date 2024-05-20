@@ -7,8 +7,8 @@ import Companies from "./pages/companies";
 import NoPage from "./pages/noPage";
 import Desempregados from "./pages/desempregados";
 import Login from "./pages/login";
-// import Register from "./pages/register";
-// import JobOffer from "./pages/jobOffer";
+import Register from "./pages/register";
+import JobOffer from "./pages/jobOffer";
 // import ListJobOffers from "./pages/listJobOffers";
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/companies" element={<Companies />} />
           <Route path="/desempregados" element={<Desempregados />} />
-          {/* <Route path="/login" element={<Login />} /> */}
-          {/* <Route path="/register" element={<Auth />} />
-          <Route path="/joboffers" element={<Auth />} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/joboffers" element={<JobOffer />} /> 
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
