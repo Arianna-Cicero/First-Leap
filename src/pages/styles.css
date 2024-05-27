@@ -3,7 +3,7 @@
   border-radius: 5px; /* Add rounded corners */
   padding: 20px; /* Add padding */
   box-shadow: none; /* Remove any box shadow */
-  background-color: #F3F1FF;
+  background-color: #f3f1ff;
   font-family: sans-serif;
 }
 
@@ -53,6 +53,81 @@
   background-color: gray;
 }
 
-.bar-button{
+.bar-button {
   margin-bottom: 30px;
+}
+
+.create-icon {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.create-icon:hover {
+  transform: scale(1.2); /* Increase size on hover */
+  cursor: pointer;
+}
+
+.container-create {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid black; /* Adiciona um traço branco embaixo */
+  background-color: transparent;
+  color: bla; /* Texto branco */
+  outline: none;
+  margin-bottom: 25px;
+}
+
+.input-box::placeholder {
+  color: black; /* Cor do placeholder (opcional) */
+}
+
+.input-box:focus {
+  border-color: black; /* Cor da borda ao focar */
+}
+
+.btn-dropdown {
+  background-color: gray; /* Cor de fundo azul */
+  color: #fff; /* Cor do texto branco */
+  border: none; /* Remove bordas */
+  padding: 10px 20px; /* Espaçamento interno */   
+  font-size: 20px; /* Tamanho da fonte */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mãozinha */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+  margin-bottom: 20px;
+}
+
+.container-process {
+  display: flex;
+  justify-content: space-between; /* Ensure there is space between the columns */
+  align-items: center; /* Align items vertically at the center */
+}
+
+.create-button {
+  background-color: black; 
+  border: none;              /* Remove borders */
+  color: white;              /* White text */
+  padding: 10px 25px;        /* Some padding */
+  text-align: center;        /* Center the text */
+  text-decoration: none;     /* Remove underline */
+  display: inline-block;     /* Get it to line up correctly */
+  font-size: 20px;           /* Increase font size */
+  margin: 4px 2px;           /* Some margin */
+  cursor: pointer;           /* Pointer/hand icon */
+  border-radius: 12px;       /* Rounded corners */
+}
+
+.create-button:hover {
+  transform: scale(1.05); /* Increase size on hover */
 }

@@ -4,10 +4,19 @@ import "./styles.css";
 import React from "react";
 import SearchButton from "../components/searchButton";
 import JobOffersComponents from "../components/jobOffersComponents";
-function ListJobOffers() {
+import CreateIcon from "../assets/create-icon.svg";
+function Jobs() {
   return (
     <Layout>
       <div class="d-flex justify-content-center bar-button">
+        <a href="/createJob">
+          {" "}
+          <img
+            src={CreateIcon}
+            alt="Create Icon"
+            className="nav-link create-icon "
+          ></img>
+        </a>
         <SearchBar />
         <SearchButton />
       </div>
@@ -18,4 +27,4 @@ function ListJobOffers() {
   );
 }
 
-export default ListJobOffers;
+export default Jobs;

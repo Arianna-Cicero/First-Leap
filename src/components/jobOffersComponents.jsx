@@ -1,12 +1,15 @@
 import React from "react";
-function JobOffersComponents(){
-  return(
-    <div class="container offers bg-danger">
-        <div class="row justify-content-center">
-          <div class="col-md-6 card">
-            <div class="card-body">
-              <h3 class="card-title">Titulo da Oferta</h3>
+
+function JobOffersComponents() {
+  return (
+    <div className="container-offers d-flex justify-content-center align-items-center">
+      <div className="row justify-content-center">
+        <div className="col-md-6 d-flex justify-content-center">
+          <div className="job-card card d-flex justify-content-center align-items-center">
+            <div className="card-body">
+              <h3 className="card-title">Titulo da Oferta</h3>
               <h4>Empresa</h4>
+              <p>Data da Publicação</p>
               <h5>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut
                 turpis at risus iaculis tempus. Aliquam erat volutpat. Proin
@@ -19,11 +22,14 @@ function JobOffersComponents(){
               </h5>
             </div>
           </div>
-          <div class="col-md-6 card">
-            <div class="card-body">
-              <h3 class="card-title">Titulo da Oferta</h3>
+        </div>
+        <div className="col-md-6 d-flex justify-content-center">
+          <div className="job-card card d-flex justify-content-center align-items-center">
+            <div className="card-body">
+              <h3 className="card-title">Titulo da Oferta</h3>
               <h4>Empresa</h4>
-              <h5> 
+              <p>Data da Publicação</p>
+              <h5>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut
                 turpis at risus iaculis tempus. Aliquam erat volutpat. Proin
                 egestas sem id hendrerit malesuada. Phasellus non iaculis lacus,
@@ -37,6 +43,8 @@ function JobOffersComponents(){
           </div>
         </div>
       </div>
+    </div>
   );
 }
+
 export default JobOffersComponents;
