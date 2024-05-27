@@ -42,7 +42,10 @@ function CreateJob() {
               rows="1"
             ></textarea>
           </div>
-          <SelectionProcess/>
+          <SelectionProcess />
+          <div className="d-flex justify-content-center">
+            <button className="create-button">Create</button>
+          </div>
         </div>
       </Layout>
     </>

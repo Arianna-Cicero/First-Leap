@@ -114,3 +114,20 @@
   align-items: center; /* Align items vertically at the center */
 }
 
+.create-button {
+  background-color: black; 
+  border: none;              /* Remove borders */
+  color: white;              /* White text */
+  padding: 10px 25px;        /* Some padding */
+  text-align: center;        /* Center the text */
+  text-decoration: none;     /* Remove underline */
+  display: inline-block;     /* Get it to line up correctly */
+  font-size: 20px;           /* Increase font size */
+  margin: 4px 2px;           /* Some margin */
+  cursor: pointer;           /* Pointer/hand icon */
+  border-radius: 12px;       /* Rounded corners */
+}
+
+.create-button:hover {
+  transform: scale(1.05); /* Increase size on hover */
+}

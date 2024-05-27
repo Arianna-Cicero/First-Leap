@@ -3,6 +3,7 @@ import Imagem from "../assets/Login-rafiki.svg";
 import React from "react";
 import FacebookIcon from "../assets/Facebook_Icon.svg";
 import GoogleIcon from "../assets/Google_Icon.svg";
+import { Link } from "react-router-dom";
 function LoginComp() {
   return (
     <div class="container text-center">
@@ -39,7 +40,9 @@ function LoginComp() {
             </button>
           </div>
           <p>Se ainda não se encontra resgistado clique aqui</p>
-          <button className="btn btn-primary register-button" href="/register">Registrar</button>
+          <Link to="/register" className="btn btn-primary register-button">
+            Registrar
+          </Link>
         </div>
       </div>
     </div>

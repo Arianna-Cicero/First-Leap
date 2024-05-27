@@ -9,7 +9,14 @@ function Jobs() {
   return (
     <Layout>
       <div class="d-flex justify-content-center bar-button">
-        <img src={CreateIcon} alt="Create Icon" className="nav-link create-icon " href="/createJob"></img>
+        <a href="/createJob">
+          {" "}
+          <img
+            src={CreateIcon}
+            alt="Create Icon"
+            className="nav-link create-icon "
+          ></img>
+        </a>
         <SearchBar />
         <SearchButton />
       </div>
