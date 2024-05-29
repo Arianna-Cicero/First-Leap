@@ -1,3 +1,6 @@
+//descomentar linha 28
+//apagar linha 30
+
 import "./styles.css";
 import Imagem from "../assets/Login-rafiki.svg";
 import React, { useState } from "react";
@@ -12,7 +15,7 @@ function LoginComp() {
   const handleSubmit = async () => {
     //event.present.default();
     console.log("entrou aqui");
-    let response;
+    let response = "";
     const userobj = {
       user: user,
       password: password,
@@ -45,7 +48,7 @@ function LoginComp() {
           <form method="get" onSubmit={handleSubmit}>
             <h3>LOGIN</h3>
             <input
-              type="email"
+              type="text"
               className="form-control register-input"
               id="username"
               placeholder="Username"
