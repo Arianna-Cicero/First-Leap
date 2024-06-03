@@ -22,7 +22,7 @@ function CreateJob() {
             <h3 className="title title-medium text-left">Descrição</h3>
             <textarea
               placeholder="Digite algo..."
-              class="input-box"
+              className="input-box"
               rows="1"
             ></textarea>
           </div>
@@ -30,7 +30,7 @@ function CreateJob() {
             <h3 className="title title-medium text-left">Requerimentos</h3>
             <textarea
               placeholder="Digite algo..."
-              class="input-box"
+              className="input-box"
               rows="1"
             ></textarea>
           </div>
@@ -38,7 +38,7 @@ function CreateJob() {
             <h3 className="title title-medium text-left">Beneficios</h3>
             <textarea
               placeholder="Digite algo... "
-              class="input-box"
+              className="input-box"
               rows="1"
             ></textarea>
           </div>

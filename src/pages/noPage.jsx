@@ -11,7 +11,7 @@ function NoPage() {
           A página que estavas a tentar encontrar pode ter sido apagada, o nome
           foi modificado ou está temporalmente indisponível.
         </p>
-        <a class="btn btn-outline-success " role="button" href="/home">
+        <a className="btn btn-outline-success " role="button" href="/home">
           Voltar para a homepage
         </a>
       </div>

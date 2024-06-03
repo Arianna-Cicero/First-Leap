@@ -8,7 +8,7 @@ import CreateIcon from "../assets/create-icon.svg";
 function Jobs() {
   return (
     <Layout>
-      <div class="d-flex justify-content-center bar-button">
+      <div className="d-flex justify-content-center bar-button">
         <a href="/createJob">
           {" "}
           <img

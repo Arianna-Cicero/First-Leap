@@ -6,22 +6,22 @@ import GoogleIcon from "../assets/Google_Icon.svg";
 import { Link } from "react-router-dom";
 function LoginComp() {
   return (
-    <div class="container text-center">
-      <div class="row align-items-start">
-        <div class="col">
+    <div className="container text-center">
+      <div className="row align-items-start">
+        <div className="col">
           <img src={Imagem} height="600" alt="ImagemDesempregados" />
         </div>
-        <div class="col">
+        <div className="col">
           <h3>LOGIN</h3>
           <input
             type="text"
-            class="form-control register-input"
+            className="form-control register-input"
             id="username"
             placeholder="Username"
           ></input>
           <input
             type="text"
-            class="form-control register-input"
+            className="form-control register-input"
             id="password"
             placeholder="Password"
           ></input>
