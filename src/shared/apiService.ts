@@ -114,6 +114,7 @@ export const getJobOffers = () => get(path_joboffer);
 export const createJobOffer = (data) => post(path_joboffer, data);
 export const updateJobOffer = (id, data) => patch(path_joboffer, id, data);
 export const deleteJobOffer = (id) => deleteResource(path_joboffer, id);
+export const getJobOfferById = (id) => get(`${path_joboffer}/${id}`);
 
 //Company requests
 const path_company = "/company";

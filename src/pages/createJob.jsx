@@ -2,35 +2,66 @@ import React, { useState } from "react";
 import Layout from "../components/layout";
 import { createJobOffer } from "../shared/apiService";
 import SelectionProcess from "../components/selectionProcess";
+import StatusButton from "../components/statusButton";
 
 function CreateJob() {
-  const [titulo, SetTitulo] = useState("");
-  const [descricao, SetDescricao] = useState("");
-  const [requirimentos, SetRequirimentos] = useState("");
-  const [beneficios, SetBeneficios] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [requisites, setRequisites] = useState("");
+  const [benefits, setBenefits] = useState("");
+  const [responsibilities, setResponsibilities] = useState("");
+  const [isOpen, setIsOpen] = useState(true);
+  const [deadline, setDeadline] = useState("");
+  const [showPopup, setShowPopup] = useState(false); 
 
-  const postTitulo = (event) => {
-    SetTitulo(event.target.value);
+
+  const postTitle = (event) => {
+    setTitle(event.target.value);
   };
-  const postDescricao = (event) => {
-    SetDescricao(event.target.value);
+  const postDescription = (event) => {
+    setDescription(event.target.value);
   };
-  const postRequirementos = (event) => {
-    SetRequirimentos(event.target.value);
+  const postRequisites = (event) => {
+    setRequisites(event.target.value);
   };
-  const postBeneficios = (event) => {
-    SetBeneficios(event.target.value);
+  const postBenefits = (event) => {
+    setBenefits(event.target.value);
+  };
+  const postResponsibilities = (event) => {
+    setResponsibilities(event.target.value);
+  };
+  const postDeadline = (event) => {
+    setDeadline(event.target.value);
+  }
+
+  const toggleStatus = () => {
+    setIsOpen(!isOpen);
   };
 
-  const Create = () => {
+  const create = () => {
     const obj = {
-      titulo: titulo,
-      descricao: descricao,
-      requirimentos: requirimentos,
-      beneficios: beneficios,
+      title: title,
+      description: description,
+      requisites: requisites,
+      benefits: benefits,
+      responsibilities: responsibilities,
+      status: isOpen ? "Open" : "Close",
+      deadline: deadline,
     };
+    console.log(obj);
     createJobOffer(obj);
+
+    setShowPopup(true);
+
+    setTitle("");
+    setDescription("");
+    setRequisites("");
+    setBenefits("");
+    setResponsibilities("");
+    setIsOpen(true);
+    setDeadline("");
   };
+
   return (
     <>
       <Layout>
@@ -44,7 +75,7 @@ function CreateJob() {
               type="text"
               placeholder="Digite algo..."
               className="input-box"
-              onChange={postTitulo}
+              onChange={postTitle}
             />
           </div>
           <div className="input-container">
@@ -53,7 +84,7 @@ function CreateJob() {
               placeholder="Digite algo..."
               className="input-box"
               rows="1"
-              onChange={postDescricao}
+              onChange={postDescription}
             ></textarea>
           </div>
           <div className="input-container">
@@ -62,7 +93,7 @@ function CreateJob() {
               placeholder="Digite algo..."
               className="input-box"
               rows="1"
-              onChange={postRequirementos}
+              onChange={postRequisites}
             ></textarea>
           </div>
           <div className="input-container">
@@ -71,15 +102,43 @@ function CreateJob() {
               placeholder="Digite algo... "
               className="input-box"
               rows="1"
-              onChange={postBeneficios}
+              onChange={postBenefits}
             ></textarea>
+          </div>
+          <div className="input-container">
+            <h3 className="title title-medium text-left">Responsabilidades</h3>
+            <textarea
+              placeholder="Digite algo... "
+              className="input-box"
+              rows="1"
+              onChange={postResponsibilities}
+            ></textarea>
+          </div>
+          <div className="input-container">
+            <h3 className="title title-medium text-left">Data de Deadline</h3>
+            <input
+              type="date"
+              className="input-box"
+              rows="1"
+              onChange={postDeadline}
+            ></input>
+          </div>
+          <div className="input-container">
+            <h3 className="title title-medium text-left">Estado atual:</h3>
+            <StatusButton isOpen={isOpen} toggleStatus={toggleStatus} />
           </div>
           <SelectionProcess />
           <div className="d-flex justify-content-center">
-            <button className="create-button" onClick={Create}>
+            <button className="create-button" onClick={create}>
               Create
             </button>
           </div>
+          {showPopup && (
+            <div className="alert alert-success alert-dismissible fade show" role="alert">
+              Job offer created successfully!
+              <button type="button" className="btn-close" onClick={() => setShowPopup(false)}></button>
+            </div>
+          )}
         </div>
       </Layout>
     </>

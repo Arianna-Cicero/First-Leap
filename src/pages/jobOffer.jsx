@@ -1,41 +1,117 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import "./styles.css"; // Import the CSS file for styling
-import ShareIcon from "../assets/Share-Icon.svg"
+import ShareIcon from "../assets/Share-Icon.svg";
+import { getJobOfferById, getJobOffers } from "../shared/apiService";
+import { useParams } from "react-router-dom";
+
+
 function JobOffer() {
+  const { id } = useParams();
+  const [jobOffer, setJobOffer] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchJobOffer = async () => {
+      try {
+        const data = await getJobOfferById(id); // Fetch job offer data by ID
+        setJobOffer(data);
+      } catch (error) {
+        console.error("Error fetching job offer:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJobOffer();
+  }, [id]); // Make sure to include id in the dependency array
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!jobOffer) {
+    return <div>Job offer not found</div>;
+  }
+
   return (
     <Layout>
-      <div className="job-offer-container">
-        <div className="job-details">
-          <h1 className="text-center title title-large">Titulo da Oferta</h1>
-        <div>
-          <h2 className="text-center title title-small">Nome da Empresa</h2>
+      <div className="container-create">
+        <div className="centered-container">
+          <h1 className="title title-large text-center">Job Offer</h1>
         </div>
-          
+        <div className="input-container">
+          <h3 className="title title-medium text-left">Título da Oferta</h3>
+          <input
+            type="text"
+            placeholder="Digite algo..."
+            className="input-box"
+            value={jobOffer.title}
+            disabled
+          />
         </div>
-        <div className="job-description">
-          <h3 className="title title-small">Descrição da Oferta</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut
-            turpis at risus iaculis tempus. Aliquam erat volutpat. Proin egestas
-            sem id hendrerit malesuada. Phasellus non iaculis lacus, in ultrices
-            ipsum. Praesent purus nunc, finibus ac risus ac, facilisis euismod
-            dui. Phasellus imperdiet sem nec nibh varius, non tincidunt sem
-            cursus. Integer nec sollicitudin lectus. Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per ince
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut
-            turpis at risus iaculis tempus. Aliquam erat volutpat. Proin egestas
-            sem id hendrerit malesuada. Phasellus non iaculis lacus, in ultrices
-            ipsum. Praesent purus nunc, finibus ac risus ac, facilisis euismod
-            dui. Phasellus imperdiet sem nec nibh varius, non tincidunt sem
-            cursus. Integer nec sollicitudin lectus. Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per ince
-          </p>
+        <div className="input-container">
+          <h3 className="title title-medium text-left">Descrição</h3>
+          <textarea
+            placeholder="Digite algo..."
+            className="input-box"
+            rows="1"
+            value={jobOffer.description}
+            disabled
+          ></textarea>
         </div>
-        <div>
-          <button className="apply-button">Candidatar</button>
+        <div className="input-container">
+          <h3 className="title title-medium text-left">Requerimentos</h3>
+          <textarea
+            placeholder="Digite algo..."
+            className="input-box"
+            rows="1"
+            value={jobOffer.requisites}
+            disabled
+          ></textarea>
+        </div>
+        <div className="input-container">
+          <h3 className="title title-medium text-left">Benefícios</h3>
+          <textarea
+            placeholder="Digite algo..."
+            className="input-box"
+            rows="1"
+            value={jobOffer.benefits}
+            disabled
+          ></textarea>
+        </div>
+        <div className="input-container">
+          <h3 className="title title-medium text-left">Responsabilidades</h3>
+          <textarea
+            placeholder="Digite algo..."
+            className="input-box"
+            rows="1"
+            value={jobOffer.responsibilities}
+            disabled
+          ></textarea>
+        </div>
+        <div className="input-container">
+          <h3 className="title title-medium text-left">Deadline</h3>
+          <input
+            type="date"
+            className="input-box"
+            value={jobOffer.deadline}
+            disabled
+          />
+        </div>
+        <div className="input-container">
+          <h3 className="title title-medium text-left">Estado atual:</h3>
+          <input
+            type="text"
+            className="input-box"
+            value={jobOffer.status}
+            disabled
+          />
+        </div>
+        <div className="d-flex justify-content-center mt-3">
+          <button className="create-button" disabled>
+            Candidatar
+          </button>
           <img src={ShareIcon} alt="Share Icon" className="share-icon" />
         </div>
       </div>
@@ -44,4 +120,3 @@ function JobOffer() {
 }
 
 export default JobOffer;
-
