@@ -5,6 +5,11 @@ import Chat from "../assets/icon_chat.svg";
 import "../../index.css";
 
 function FixedNavBar() {
+  const login = JSON.parse(localStorage.getItem("login"));
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light fixed-top"
@@ -56,15 +61,24 @@ function FixedNavBar() {
                 className="icon"
               />
             </a>
-            <a className="navbar-brand" href="/login">
-              <img
-                src={ProfileIcon}
-                alt="Profile"
-                width="30"
-                height="30"
-                className="icon"
-              />
-            </a>
+            {login && login.login == "1" ? (
+              <>
+                <a className="navbar-brand">{login.user}</a>
+                <button type="button" onClick={handleLogout}>
+                  Logout
+                </button>
+              </>
+            ) : (
+              <a className="navbar-brand" href="/login">
+                <img
+                  src={ProfileIcon}
+                  alt="Profile"
+                  width="30"
+                  height="30"
+                  className="icon"
+                />
+              </a>
+            )}
           </div>
         </div>
       </div>
