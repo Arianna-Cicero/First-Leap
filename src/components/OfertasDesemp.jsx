@@ -3,24 +3,24 @@ import "../../index.css";
 
 function OfertasDesemp() {
   return (
-    <div class="container-desemp text-center">
-      <div class="row align-items-start">
-        <div class="col">
-          <h2 class="title title-large section-title">
-          Orientações para a Procura de Emprego
+    <div className="container-desemp text-center">
+      <div className="row align-items-start">
+        <div className="col">
+          <h2 className="title title-large section-title">
+            Orientações para a Procura de Emprego
           </h2>
-          <p class="section-text p-section">
+          <p className="section-text p-section">
             Orientações sobre como criar um currículo eficaz, escrever cartas de
             apresentação personalizadas, preparar-se para entrevistas e expandir
             a sua rede de contactos profissionais através de networking online e
             offline.
           </p>
         </div>
-        <div class="col">
-          <h2 class="title title-large section-title">
+        <div className="col">
+          <h2 className="title title-large section-title">
             Recursos de Desenvolvimento Profissional
           </h2>
-          <p class="section-text p-section">
+          <p className="section-text p-section">
             Lista de plataformas online que oferecem cursos gratuitos ou
             acessíveis, workshops ou eventos de desenvolvimento profissional
             locais, sugestões para adquirir novas competências e certificações,
@@ -28,11 +28,11 @@ function OfertasDesemp() {
             podcasts.
           </p>
         </div>
-        <div class="col">
-          <h2 class="title title-large section-title">
+        <div className="col">
+          <h2 className="title title-large section-title">
             Informações sobre Benefícios e Assistência
           </h2>
-          <p class="section-text p-section">
+          <p className="section-text p-section">
             Explicação detalhada sobre como solicitar o subsídio de desemprego,
             outros benefícios disponíveis para desempregados, como assistência
             alimentar, assistência médica ou programas de habitação, e recursos

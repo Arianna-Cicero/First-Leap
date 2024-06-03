@@ -14,18 +14,18 @@ import CreateJob from "./pages/createJob";
 function App() {
   return (
     <>
-      <BrowserRouter> 
+      <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/jobs" element={<Jobs/>} />
+          <Route path="/jobs" element={<Jobs />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/about" element={<About />} />
           <Route path="/companies" element={<Companies />} />
           <Route path="/desempregados" element={<Desempregados />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/joboffers" element={<JobOffer />} /> 
+          <Route path="/joboffers" element={<JobOffer />} />
           <Route path="/createJob" element={<CreateJob />} />
           <Route path="*" element={<NoPage />} />
         </Routes>

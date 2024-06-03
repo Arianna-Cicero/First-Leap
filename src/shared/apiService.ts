@@ -9,6 +9,18 @@ const apiService = axios.create({
   },
 });
 
+export const initiateOAuth2Flow = async () => {
+  try {
+    // Make a POST request to your backend endpoint that generates the OAuth2 authorization URL
+    const response = await apiService.post("/oauth");
+    // Redirect the user to the authorization URL obtained from the backend
+    window.location.href = response.data.url;
+  } catch (error) {
+    console.error("Error initiating OAuth2 flow:", error);
+    // Handle error, e.g., display error message to the user
+  }
+};
+
 //get
 export const get = async (path) => {
   try {
@@ -27,6 +39,20 @@ export const post = async (path, data) => {
     return response.data;
   } catch (error) {
     console.error(`Error posting data to ${path}:`, error);
+    throw error;
+  }
+};
+
+export const registerCandidate = async (data: FormData) => {
+  try {
+    const response = await apiService.post("/candidate", data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error creating candidate:", error);
     throw error;
   }
 };
@@ -54,6 +80,13 @@ export const patch = async (path, id, data) => {
   }
 };
 
+// Auth/Login requests
+const path_login = "/candidacy";
+export const getAuth = () => get(path_login);
+export const createAuth = (data) => post(path_login, data);
+export const updateAuth = (id, data) => patch(path_login, id, data);
+export const deleteAuth = (id) => deleteResource(path_login, id);
+
 //Candidacy requests
 const path_candidacy = "/candidacy";
 export const getCandidacy = () => get(path_candidacy);
@@ -64,7 +97,7 @@ export const deleteCandidacy = (id) => deleteResource(path_candidacy, id);
 //Candidate requests
 const path_candidate = "/candidate";
 export const getCandidate = () => get("/candidates");
-export const createCandidate = (data) => post(path_candidate, data);
+export const createCandidate = (data: any) => axios.post(path_candidate, data);
 export const updateCandidate = (id, data) => patch(path_candidate, id, data);
 export const deleteCandidate = (id) => deleteResource(path_candidate, id);
 
@@ -76,16 +109,16 @@ export const updateUtilizador = (id, data) => patch(path_utilizador, id, data);
 export const deleteUtilizador = (id) => deleteResource(path_utilizador, id);
 
 //JobOffers requests
-const path_joboffer = "/utilizador";
+const path_joboffer = "/job-offer";
 export const getJobOffers = () => get(path_joboffer);
 export const createJobOffer = (data) => post(path_joboffer, data);
 export const updateJobOffer = (id, data) => patch(path_joboffer, id, data);
 export const deleteJobOffer = (id) => deleteResource(path_joboffer, id);
 
 //Company requests
-const path_company = "/utilizador";
-export const getCompany = () => get("/company");
-export const createCompany = (data) => post("/company", data);
+const path_company = "/company";
+export const getCompany = () => get(path_company);
+export const createCompany = (data) => post(path_company, data);
 export const updateCompany = (id, data) => patch(path_company, id, data);
 export const deleteCompany = (id) => deleteResource(path_company, id);
 

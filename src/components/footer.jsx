@@ -8,52 +8,64 @@ import "../../index.css";
 function Footer() {
   return (
     <footer
-      class="text-white pt-5 pb-4"
+      className="text-white pt-5 pb-4"
       data-bs-theme="dark"
       style={{ background: "#304D30" }}
     >
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 text-center">
-            <h2 class="footer-heading">
-              <a href="#" class="link-light text-decoration-none">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-md-12 text-center">
+            <h2 className="footer-heading">
+              <a href="#" className="link-light text-decoration-none">
                 First Leap
               </a>
             </h2>
-            <p class="menu">
-              <a class="link-secondary text-decoration-none mx-2" href="/home">
+            <p className="menu">
+              <a
+                className="link-secondary text-decoration-none mx-2"
+                href="/home"
+              >
                 Home
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="/jobs">
+              <a
+                className="link-secondary text-decoration-none mx-2"
+                href="/jobs"
+              >
                 Jobs
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="/about">
+              <a
+                className="link-secondary text-decoration-none mx-2"
+                href="/about"
+              >
                 About
               </a>
               <a
-                class="link-secondary text-decoration-none mx-2"
+                className="link-secondary text-decoration-none mx-2"
                 href="/companies"
               >
                 Companies
               </a>
               <a
-                class="link-secondary text-decoration-none mx-2"
+                className="link-secondary text-decoration-none mx-2"
                 href="/contacts"
               >
                 Contacts
               </a>
-              <a class="link-secondary text-decoration-none mx-2" href="/chat">
+              <a
+                className="link-secondary text-decoration-none mx-2"
+                href="/chat"
+              >
                 Chat
               </a>
               <a
-                class="link-secondary text-decoration-none mx-2"
+                className="link-secondary text-decoration-none mx-2"
                 href="profile"
               >
                 Profile
               </a>
             </p>
-            <ul class="ftco-footer-social p-0">
-              <li class="footer-li">
+            <ul className="ftco-footer-social p-0">
+              <li className="footer-li">
                 <a
                   href="https://www.linkedin.com/in/arianna-cicero-ba0b5a220/"
                   data-toggle="tooltip"
@@ -65,7 +77,7 @@ function Footer() {
                   </span>
                 </a>
               </li>
-              <li class="footer-li">
+              <li className="footer-li">
                 <a
                   href="/contacts"
                   data-toggle="tooltip"
@@ -77,7 +89,7 @@ function Footer() {
                   </span>
                 </a>
               </li>
-              <li class="footer-li">
+              <li className="footer-li">
                 <a
                   href="/contacts"
                   data-toggle="tooltip"
@@ -92,9 +104,9 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-md-12 text-center">
-            <p class="copyright">
+        <div className="row mt-5">
+          <div className="col-md-12 text-center">
+            <p className="copyright">
               Copyright &copy; All rights reserved | Owned by CodeCraft.
             </p>
           </div>

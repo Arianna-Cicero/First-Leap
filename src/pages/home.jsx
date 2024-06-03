@@ -34,22 +34,22 @@ function Home() {
             className="container"
             style={{ marginTop: 30, marginBottom: 30 }}
           >
-            <div class="row align-items-center">
-              <div class="col">
+            <div className="row align-items-center">
+              <div className="col">
                 <Card
                   imageUrl={thinking}
                   title="Primeiro Emprego"
                   link="/about"
                 />
               </div>
-              <div class="col">
+              <div className="col">
                 <Card
                   imageUrl={workingCuate}
                   title="Desempregados a longo prazo"
                   link="/desempregados"
                 />
               </div>
-              <div class="col">
+              <div className="col">
                 <Card
                   imageUrl={certification}
                   title="Estágio professional"
