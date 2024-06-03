@@ -1,11 +1,11 @@
 import Layout from "../components/layout";
 import "./styles.css";
-import ImgSideInputs from "../components/imgSideInputs";
+import RegisterComp from "../components/registerComp";
 import React from "react";
 function Register() {
   return (
     <Layout>
-        <ImgSideInputs></ImgSideInputs>
+      <RegisterComp />
     </Layout>
   );
 }
