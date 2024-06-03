@@ -25,7 +25,7 @@ function App() {
           <Route path="/desempregados" element={<Desempregados />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/joboffers" element={<JobOffer />} />
+          <Route path="/joboffer/:id" element={<JobOffer />} /> 
           <Route path="/createJob" element={<CreateJob />} />
           <Route path="*" element={<NoPage />} />
         </Routes>

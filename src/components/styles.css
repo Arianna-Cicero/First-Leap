@@ -171,6 +171,7 @@
   width: 100%;
   height: auto;
   margin-bottom: 25px;
+  align-items: initial !important;
 }
 
 .job-card:hover {
@@ -229,4 +230,28 @@
 .add-icon:hover {
   cursor: pointer;
   transform: scale(1.2); /* Aumenta o tamanho da imagem em 20% */
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: background-color 0.3s;
+  border-radius: 15px;
+
+}
+
+.toggle-button:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Aumenta o tamanho da imagem em 20% */
+}
+
+.toggle-button.open {
+  background-color: green;
+}
+
+.toggle-button.close {
+  background-color: red;
 }
