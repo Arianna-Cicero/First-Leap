@@ -2,10 +2,12 @@ import "./styles.css";
 import Imagem from "../assets/Login-rafiki.svg";
 import { React, useEffect, useState, useRef } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function RegisterComp() {
   const userRef = useRef();
   const errRef = useRef();
+  const navigate = useNavigate()
 
   const url = "http://localhost:3000/candidate";
   /* eslint-disable */
@@ -78,7 +80,8 @@ function RegisterComp() {
         .catch((err) => console.log(err));
 
       setErrMsg("");
-      setSuccess(true);
+      setSuccess(true); 
+      return navigate("/emailCode")
     } catch (err) {
       console.error("Error registering user:", err);
       setErrMsg("Registration failed");
