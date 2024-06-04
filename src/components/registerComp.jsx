@@ -78,10 +78,13 @@ function RegisterComp() {
         })
         .then((response) => console.log(response))
         .catch((err) => console.log(err));
+        
+      
+      const userId = response.data.id;
 
       setErrMsg("");
       setSuccess(true); 
-      return navigate("/emailCode")
+      return navigate("/emailCode", { state: {userId}})
     } catch (err) {
       console.error("Error registering user:", err);
       setErrMsg("Registration failed");
