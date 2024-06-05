@@ -9,7 +9,7 @@ function FilterButton({ handleFilterChange }) {
   // Handle changes to filter options
   const handleOrderChange = (e) => {
     setOrder(e.target.value);
-    handleFilterChange({ order: e.target.value, dateOrder });
+    handleFilterChange({ order: e.target.value });
   };
 
   const handleDateOrderChange = (e) => {

@@ -5,7 +5,7 @@ import CodeInput from "../components/codeInput";
 function EmailCode() {
   return (
     <Layout>
-      <CodeInput></CodeInput>
+      <CodeInput/>
     </Layout>
   );
 }

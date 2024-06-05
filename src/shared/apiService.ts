@@ -103,7 +103,8 @@ export const getCandidate = () => get("/candidates");
 export const createCandidate = (data: any) => axios.post(path_candidate, data);
 export const updateCandidate = (id, data) => patch(path_candidate, id, data);
 export const deleteCandidate = (id) => deleteResource(path_candidate, id);
-export const verifyEmail = (codigo, userId) => post(codigo, userId)
+export const verifyEmail = (codigo, userId) => post(`${path_candidate}/verify-email`, {params : {codigo, userId}})
+export const findIdByUser = (username) => axios.get(`${path_candidate}/findIdByUser`, { params: { username } });
 
 //Utilizador requests
 const path_utilizador = "/utilizador";
