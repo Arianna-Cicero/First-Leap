@@ -80,8 +80,9 @@ export const patch = async (path, id, data) => {
   }
 };
 
+
 // Auth/Login requests
-const path_login = "/candidacy";
+const path_login = "/auth/login";
 export const getAuth = () => get(path_login);
 export const createAuth = (data) => post(path_login, data);
 export const updateAuth = (id, data) => patch(path_login, id, data);
@@ -93,6 +94,8 @@ export const getCandidacy = () => get(path_candidacy);
 export const createCandidacy = (data) => post(path_candidacy, data);
 export const updateCandidacy = (id, data) => patch(path_candidacy, id, data);
 export const deleteCandidacy = (id) => deleteResource(path_candidacy, id);
+export const applyForJob = (candidateId, jobId) => post(`${path_candidacy}/apply`, { candidateId, jobId });
+
 
 //Candidate requests
 const path_candidate = "/candidate";
@@ -100,6 +103,8 @@ export const getCandidate = () => get("/candidates");
 export const createCandidate = (data: any) => axios.post(path_candidate, data);
 export const updateCandidate = (id, data) => patch(path_candidate, id, data);
 export const deleteCandidate = (id) => deleteResource(path_candidate, id);
+export const verifyEmail = (codigo, userId) => post(`${path_candidate}/verify-email`, {params : {codigo, userId}})
+export const findIdByUser = (username) => axios.get(`${path_candidate}/findIdByUser`, { params: { username } });
 
 //Utilizador requests
 const path_utilizador = "/utilizador";

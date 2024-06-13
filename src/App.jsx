@@ -11,10 +11,12 @@ import Register from "./pages/register";
 import JobOffer from "./pages/jobOffer";
 import Jobs from "./pages/jobs";
 import CreateJob from "./pages/createJob";
+import EmailCode from "./pages/emailCode";
 function App() {
+  
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -27,9 +29,10 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/joboffer/:id" element={<JobOffer />} /> 
           <Route path="/createJob" element={<CreateJob />} />
+          <Route path="/emailCode" element={<EmailCode/>} />
           <Route path="*" element={<NoPage />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }

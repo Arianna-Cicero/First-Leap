@@ -4,37 +4,39 @@ import React, { useState } from "react";
 import FacebookIcon from "../assets/Facebook_Icon.svg";
 import GoogleIcon from "../assets/Google_Icon.svg";
 import { Link } from "react-router-dom";
-import { getUtilizador } from "../shared/apiService";
+import { createAuth } from "../shared/apiService";
+
 function LoginComp() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async () => {
-    //event.present.default();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     console.log("entrou aqui");
-    let response;
+
     const userobj = {
-      user: user,
+      username: user,
       password: password,
     };
-    const login = {
-      user: user,
-      login: "1",
-    };
-    try {
-      //response = await getUtilizador(userobj);
 
-      response = "1";
+    try {
+      const response = await createAuth(userobj);
+      if (response && response.data) {
+        localStorage.setItem("login", JSON.stringify(response.data));
+        window.location.href = "/home"; // Navigate to the home page
+      } else {
+        alert("Combinação Inválida");
+      }
     } catch (err) {
-      console.log(err);
-    }
-    if (response != "" || response != null) {
-      localStorage.setItem("login", JSON.stringify(login));
-      history.push("/home");
-    } else {
-      alert("Combinação Invalidada");
+      if (err.response && err.response.data.message === 'User not verified') {
+        alert("Usuário não verificado. Por favor, verifique seu email.");
+      } else {
+        console.error("Erro ao tentar fazer login:", err);
+        alert("Combinação Inválida");
+      }
     }
   };
+
   return (
     <div className="container text-center">
       <div className="row align-items-start">
@@ -45,7 +47,7 @@ function LoginComp() {
           <form method="get" onSubmit={handleSubmit}>
             <h3>LOGIN</h3>
             <input
-              type="email"
+              type="text"
               className="form-control register-input"
               id="username"
               placeholder="Username"

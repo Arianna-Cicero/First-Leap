@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import "./styles.css"; // Import the CSS file for styling
-import ShareIcon from "../assets/Share-Icon.svg";
-import { getJobOfferById, getJobOffers } from "../shared/apiService";
+import { getJobOfferById } from "../shared/apiService";
 import { useParams } from "react-router-dom";
-
-
+import SharingIcon from "../components/shareIcon";
+import ApplyButton from "../components/applyButton";
 function JobOffer() {
   const { id } = useParams();
   const [jobOffer, setJobOffer] = useState(null);
@@ -14,7 +13,7 @@ function JobOffer() {
   useEffect(() => {
     const fetchJobOffer = async () => {
       try {
-        const data = await getJobOfferById(id); // Fetch job offer data by ID
+        const data = await getJobOfferById(id); 
         setJobOffer(data);
       } catch (error) {
         console.error("Error fetching job offer:", error);
@@ -22,9 +21,8 @@ function JobOffer() {
         setLoading(false);
       }
     };
-
     fetchJobOffer();
-  }, [id]); // Make sure to include id in the dependency array
+  }, [id]); 
 
   if (loading) {
     return <div>Loading...</div>;
@@ -109,10 +107,8 @@ function JobOffer() {
           />
         </div>
         <div className="d-flex justify-content-center mt-3">
-          <button className="create-button" disabled>
-            Candidatar
-          </button>
-          <img src={ShareIcon} alt="Share Icon" className="share-icon" />
+          <ApplyButton/>
+          <SharingIcon/>
         </div>
       </div>
     </Layout>
